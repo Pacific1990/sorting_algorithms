@@ -1,5 +1,7 @@
 #include "sort.h"
 
+#include "stdlib.h"
+
 /**
  * bubble_sort - sorting algorithm
  * @array: array of integers
@@ -21,7 +23,7 @@ while (j < size - 1)
 {
 if (array[j] > array[j + 1])
 {
-_swaper(array, j, j + 1);
+_swap(array, j, j + 1);
 is_swapped = 1;
 print_array(array, size);
 }
@@ -31,17 +33,17 @@ j++;
 }
 
 /**
- * _swaper - a function that swap two element in an array list
+ * _swap - a function that swap two element in an array list
  * @array: int array to sort
- * @idx1 : index 1
- * @idx2: index 2
+ * @index1 : index 1
+ * @index2 : index 2
  */
-void _swaper(int *array, int idx1, int idx2)
+void _swap(int *array, int index1, int index2)
 {
 int temp;
 
-temp = array[idx1];
-array[idx1] = array[idx2];
-array[idx2] = temp;
+temp = array[index1];
+array[index1] = array[index2];
+array[index2] = temp;
 }
 
