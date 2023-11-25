@@ -6,7 +6,7 @@
  * @b: The second integer to swap.
  */
 
-void swap(int *a, int *b)
+void swap_ints(int *a, int *b)
 {
 int tmp;
 
@@ -38,7 +38,7 @@ for (i = 0; i < len - 1; i++)
 {
 if (array[i] > array[i + 1])
 {
-swap(array + i, array + i + 1);
+swap_ints(array + i, array + i + 1);
 print_array(array, size);
 bubbly = false;
 }
